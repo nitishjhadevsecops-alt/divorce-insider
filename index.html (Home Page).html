@@ -1,281 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divorce Incider | Manifesto</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #121212;
-            color: #d1d5db;
-            font-family: 'Space Grotesk', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* Navigation Header */
-        header {
-            background-color: #121212;
-            border-bottom: 1px solid #2a2a2a;
-            padding: 1.2rem 4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .logo-icon {
-            color: #e53e3e;
-            font-size: 1.6rem;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: #a0aec0;
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        nav a:hover, nav a.active {
-            color: #ffffff;
-            border-bottom: 2px solid #ffffff;
-            padding-bottom: 4px;
-        }
-
-        .btn-file {
-            border: 1px solid #e53e3e;
-            color: #e53e3e;
-            padding: 0.5rem 1.2rem;
-            text-decoration: none;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-        }
-
-        .btn-file:hover {
-            background-color: #e53e3e;
-            color: #ffffff;
-        }
-
-        /* Hero / Document Header Section */
-        .hero {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4rem 2rem 2rem 2rem;
-        }
-
-        .doc-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #718096;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 1.5rem;
-        }
-
-        .doc-header-line {
-            flex-grow: 1;
-            height: 1px;
-            background-color: #2d3748;
-            margin: 0 1rem;
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 5rem;
-            color: #ffffff;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.1;
-        }
-
-        .hero p.subtitle {
-            font-size: 1.3rem;
-            color: #a0aec0;
-            max-width: 650px;
-        }
-
-        .divider {
-            height: 1px;
-            background-color: #2a2a2a;
-            max-width: 1100px;
-            margin: 3rem auto;
-        }
-
-        /* Main Content Layout */
-        .content-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem 5rem 2rem;
-            display: grid;
-            grid-template-columns: 1.8fr 1fr;
-            gap: 4rem;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: #ffffff;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .section-num {
-            color: #e53e3e;
-            font-size: 1.2rem;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .paragraph-text {
-            color: #a0aec0;
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Sidebar Quote Box & Stamps */
-        .quote-card {
-            border-left: 3px solid #e53e3e;
-            padding-left: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .quote-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-
-        .quote-card p {
-            color: #718096;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 2rem;
-        }
-
-        .stamps-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .stamp {
-            border: 1px solid #e53e3e;
-            color: #e53e3e;
-            padding: 0.2rem 0.6rem;
-            font-size: 0.75rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transform: rotate(-3deg);
-        }
-
-        .stamp-sub {
-            color: #718096;
-            font-size: 0.75rem;
-            font-style: italic;
-        }
-
-        footer {
-            border-top: 1px solid #2a2a2a;
-            text-align: center;
-            padding: 2rem;
-            color: #4a5568;
-            font-size: 0.85rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DivorceIncider — Break Up With What's Toxic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-heading: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    body {
+      font-family: var(--font-sans);
+      background-color: #09090b;
+      color: #f4f4f5;
+    }
+  </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col antialiased">
 
-    <!-- Header Navigation -->
-    <header>
-        <a href="index.html" class="logo">
-            <span class="logo-icon">⚖</span> DivorceIncider
+  <!-- Header -->
+  <header class="border-b border-zinc-800 bg-zinc-950/90 sticky top-0 z-50 backdrop-blur-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-black tracking-widest uppercase text-white">
+        Divorce<span class="text-red-600">Incider</span>
+      </a>
+      <nav aria-label="Main navigation" class="hidden md:flex items-center gap-8">
+        <a href="#cases" class="text-sm tracking-wide uppercase text-zinc-400 hover:text-white transition-colors duration-150">The Cases</a>
+        <a href="#manifesto" class="text-sm tracking-wide uppercase text-zinc-400 hover:text-white transition-colors duration-150">Manifesto</a>
+        <a href="#file" class="border border-red-600 text-red-600 px-4 py-1.5 text-sm font-medium tracking-widest uppercase hover:bg-red-600 hover:text-white transition-colors duration-150">
+          File a Case
         </a>
-        <nav>
-            <a href="cases.html">THE CASES</a>
-            <a href="index.html" class="active">MANIFESTO</a>
-            <a href="contact.html" class="btn-file">FILE A CASE</a>
-        </nav>
-    </header>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Main Hero Banner -->
-    <section class="hero">
-        <div class="doc-header">
-            <span>OFFICIAL STATEMENT OF INTENT</span>
-            <div class="doc-header-line"></div>
-            <span>DOCKET NO. DI-2026-M01</span>
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="border-b border-zinc-800 py-20 md:py-32 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+          <span class="text-xs text-zinc-500 tracking-widest uppercase">Docket No. DI-2026-001</span>
+          <span class="flex-1 h-px bg-zinc-800"></span>
+          <span class="text-xs text-zinc-500 tracking-widest uppercase">Est. 2026</span>
         </div>
-        <h1>Why We File.</h1>
-        <p class="subtitle">A manifesto for the terminally fed up. Legally non-binding. Morally unavoidable.</p>
+
+        <div class="relative">
+          <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight mb-2">
+            We Help You Break Up With What's Toxic.
+          </h1>
+          <div class="mt-4 md:mt-0 md:absolute md:top-2 md:right-0">
+            <div class="inline-block -rotate-6 select-none">
+              <span class="inline-block border-4 border-red-600 text-red-600 px-4 py-1 text-sm md:text-base font-black tracking-[0.25em] uppercase shadow-[3px_3px_0_#dc2626]">
+                CASE OPEN
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mt-6 leading-relaxed">
+          Corruption. Single-use plastic. Bad systems. (Not your spouse — we're not lawyers.)
+        </p>
+
+        <div class="mt-10 h-px bg-zinc-800"></div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-6">
+          <a href="#file" class="border border-white text-white px-8 py-3 text-sm font-semibold tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-150">
+            File a New Case
+          </a>
+          <a href="#cases" class="text-sm text-zinc-400 hover:text-white tracking-widest uppercase underline underline-offset-4 transition-colors">
+            Browse Active Cases &rarr;
+          </a>
+        </div>
+      </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- Quote Section -->
+    <section class="border-b border-zinc-800 py-12 px-6 bg-zinc-900/50">
+      <div class="max-w-6xl mx-auto">
+        <blockquote class="text-xl md:text-2xl font-bold text-white leading-snug border-l-4 border-red-600 pl-6">
+          "The first step to recovery is admitting you're in a toxic relationship with an entire system."
+        </blockquote>
+      </div>
+    </section>
 
-    <!-- Main Legal Content Section -->
-    <main class="content-grid">
-        <div class="left-col">
-            <h2 class="section-title">
-                <span class="section-num">§ 1</span> The Problem
-            </h2>
-            <p class="paragraph-text">
-                Some relationships are simply toxic. Not in the dramatic, reality-TV sense — though that too — but in the quiet, systemic, "we've-always-done-it-this-way" sense that corrupts everything around it.
-            </p>
-            <p class="paragraph-text">
-                Corruption. Single-use plastic. Bureaucratic inertia. The kind of entanglements that have been dragged on for far too long. This platform exists strictly as a personal sandbox, testing ground, and symbolic statement against the things we ought to break up with.
-            </p>
+    <!-- Active Cases Section -->
+    <section id="cases" class="border-b border-zinc-800 py-16 md:py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-end justify-between mb-10 border-b border-zinc-800 pb-6">
+          <div>
+            <p class="text-xs text-zinc-500 tracking-widest uppercase mb-2">Active Docket</p>
+            <h2 class="text-3xl md:text-4xl font-black text-white">Featured Cases</h2>
+          </div>
+          <div class="inline-block rotate-3 select-none">
+            <span class="inline-block border-4 border-white text-white px-4 py-1 text-sm md:text-base font-black tracking-[0.25em] uppercase shadow-[3px_3px_0_#ffffff]">
+              EVIDENCE
+            </span>
+          </div>
         </div>
 
-        <div class="right-col">
-            <div class="quote-card">
-                <h3>"We didn't start the fire. But we are absolutely filing the paperwork."</h3>
-                <p>— DIVORCEINCIDER, EST. 2026</p>
-                <div class="stamps-wrapper">
-                    <div class="stamp">FILED</div>
-                    <div class="stamp">REVIEWED</div>
-                    <div class="stamp">BINDING*</div>
-                </div>
-                <span class="stamp-sub">*not actually binding</span>
+        <!-- Cases Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Case 1 -->
+          <div class="border border-zinc-800 bg-zinc-950 p-6 md:p-8 relative group hover:border-red-600 transition-colors duration-150">
+            <div class="flex items-start justify-between mb-4 border-b border-zinc-800 pb-4">
+              <div>
+                <p class="text-xs text-zinc-500 tracking-widest uppercase mb-1">Case #001</p>
+                <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Corruption</h3>
+                <p class="text-sm text-zinc-400 mt-1">The Relationship That Was Never Healthy</p>
+              </div>
+              <span class="text-xs text-red-600 border border-red-600 px-2 py-0.5 tracking-widest uppercase shrink-0 ml-4">
+                ACTIVE
+              </span>
             </div>
-        </div>
-    </main>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+              A decades-long entanglement with power, money, and selective amnesia. The evidence is overwhelming. The excuses are exhausting.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-zinc-500 tracking-widest uppercase">Verdict:</span>
+                <span class="text-xs font-black text-red-600 tracking-widest uppercase border border-red-600 px-2 py-0.5">
+                  GUILTY AS CHARGED
+                </span>
+              </div>
+              <a href="#" class="text-xs text-zinc-400 hover:text-white tracking-widest uppercase underline underline-offset-4 transition-colors">
+                View File &rarr;
+              </a>
+            </div>
+          </div>
 
-    <footer>
-        &copy; 2026 divorceinsider.in | Personal Practice & Test Bed
-    </footer>
+          <!-- Case 2 -->
+          <div class="border border-zinc-800 bg-zinc-950 p-6 md:p-8 relative group hover:border-red-600 transition-colors duration-150">
+            <div class="flex items-start justify-between mb-4 border-b border-zinc-800 pb-4">
+              <div>
+                <p class="text-xs text-zinc-500 tracking-widest uppercase mb-1">Case #002</p>
+                <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">Single-Use Plastic</h3>
+                <p class="text-sm text-zinc-400 mt-1">500 Years of Commitment You Never Asked For</p>
+              </div>
+              <span class="text-xs text-red-600 border border-red-600 px-2 py-0.5 tracking-widest uppercase shrink-0 ml-4">
+                ACTIVE
+              </span>
+            </div>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+              It showed up uninvited, refused to leave, and is now in the ocean. Classic toxic behaviour. The planet has filed a restraining order.
+            </p>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-zinc-500 tracking-widest uppercase">Verdict:</span>
+                <span class="text-xs font-black text-red-600 tracking-widest uppercase border border-red-600 px-2 py-0.5">
+                  GUILTY AS CHARGED
+                </span>
+              </div>
+              <a href="#" class="text-xs text-zinc-400 hover:text-white tracking-widest uppercase underline underline-offset-4 transition-colors">
+                View File &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 3 Classified Box -->
+        <div class="mt-8 p-6 border border-dashed border-zinc-800 text-center">
+          <p class="text-sm text-zinc-400">
+            Case #003: 
+            <span class="inline-block bg-white h-4 w-24 align-middle mx-1"></span>
+            <span class="inline-block bg-white h-4 w-16 align-middle mx-1"></span>
+            — <span class="text-red-600">UNDER INVESTIGATION</span>
+          </p>
+          <p class="text-xs text-zinc-500 mt-2 tracking-widest uppercase">[Classified pending further evidence]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="bg-red-600 py-3 px-6">
+      <p class="text-center text-white text-xs tracking-widest uppercase">
+        ⚠️ Not legal advice. Not a law firm. Not responsible for any actual divorces.
+      </p>
+    </section>
+
+    <!-- Submit Section -->
+    <section id="file" class="py-16 md:py-24 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="border border-zinc-800 p-10 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div>
+            <p class="text-xs text-zinc-500 tracking-widest uppercase mb-3">Submit for Review</p>
+            <h2 class="text-3xl md:text-4xl font-black text-white leading-tight">
+              Know a Toxic Relationship<br>That Needs Divorcing?
+            </h2>
+            <p class="text-sm text-zinc-400 mt-3 max-w-md">
+              Submit your case. We'll review the evidence. No legal fees. No lawyers. No actual jurisdiction whatsoever.
+            </p>
+          </div>
+          <div class="shrink-0">
+            <a href="#" class="block border-2 border-white text-white px-10 py-4 text-sm font-black tracking-widest uppercase hover:bg-white hover:text-black transition-colors duration-150 text-center">
+              File a New Case
+            </a>
+            <p class="text-xs text-zinc-500 mt-3 text-center tracking-wide">* Not a real legal filing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-zinc-800 bg-zinc-950">
+    <div class="bg-red-600 text-white text-center py-2 px-6">
+      <p class="text-xs tracking-widest uppercase">⚠️ Not legal advice. Not a law firm. Not responsible for any actual divorces.</p>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div>
+        <p class="text-xs text-zinc-500 tracking-widest uppercase">Docket No. DI-2026-∞</p>
+        <p class="text-xs text-zinc-500 mt-1">DivorceIncider © 2026 — A personal playground. Strictly satirical.</p>
+      </div>
+      <nav aria-label="Footer links" class="flex gap-6">
+        <a class="text-xs text-zinc-500 hover:text-white tracking-widest uppercase transition-colors" href="#cases">The Cases</a>
+        <a class="text-xs text-zinc-500 hover:text-white tracking-widest uppercase transition-colors" href="#manifesto">Manifesto</a>
+        <a class="text-xs text-zinc-500 hover:text-white tracking-widest uppercase transition-colors" href="#file">File a Case</a>
+      </nav>
+    </div>
+  </footer>
 
 </body>
 </html>
