@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divorce Incider | Manifesto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+            color: #d1d5db;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: #121212;
+            border-bottom: 1px solid #2a2a2a;
+            padding: 1.2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo-icon {
+            color: #e53e3e;
+            font-size: 1.6rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #a0aec0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 4px;
+        }
+
+        .btn-file {
+            border: 1px solid #e53e3e;
+            color: #e53e3e;
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn-file:hover {
+            background-color: #e53e3e;
+            color: #ffffff;
+        }
+
+        /* Hero / Document Header Section */
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem 2rem;
+        }
+
+        .doc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #718096;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .doc-header-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #2d3748;
+            margin: 0 1rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.3rem;
+            color: #a0aec0;
+            max-width: 650px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #2a2a2a;
+            max-width: 1100px;
+            margin: 3rem auto;
+        }
+
+        /* Main Content Layout */
+        .content-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem 2rem;
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-num {
+            color: #e53e3e;
+            font-size: 1.2rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .paragraph-text {
+            color: #a0aec0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Sidebar Quote Box & Stamps */
+        .quote-card {
+            border-left: 3px solid #e53e3e;
+            padding-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .quote-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .quote-card p {
+            color: #718096;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 2rem;
+        }
+
+        .stamps-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stamp {
+            border: 1px solid #e53e3e;
+            color: #e53e3e;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: rotate(-3deg);
+        }
+
+        .stamp-sub {
+            color: #718096;
+            font-size: 0.75rem;
+            font-style: italic;
+        }
+
+        footer {
+            border-top: 1px solid #2a2a2a;
+            text-align: center;
+            padding: 2rem;
+            color: #4a5568;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">⚖</span> DivorceIncider
+        </a>
+        <nav>
+            <a href="cases.html">THE CASES</a>
+            <a href="index.html" class="active">MANIFESTO</a>
+            <a href="contact.html" class="btn-file">FILE A CASE</a>
+        </nav>
+    </header>
+
+    <!-- Main Hero Banner -->
+    <section class="hero">
+        <div class="doc-header">
+            <span>OFFICIAL STATEMENT OF INTENT</span>
+            <div class="doc-header-line"></div>
+            <span>DOCKET NO. DI-2026-M01</span>
+        </div>
+        <h1>Why We File.</h1>
+        <p class="subtitle">A manifesto for the terminally fed up. Legally non-binding. Morally unavoidable.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Main Legal Content Section -->
+    <main class="content-grid">
+        <div class="left-col">
+            <h2 class="section-title">
+                <span class="section-num">§ 1</span> The Problem
+            </h2>
+            <p class="paragraph-text">
+                Some relationships are simply toxic. Not in the dramatic, reality-TV sense — though that too — but in the quiet, systemic, "we've-always-done-it-this-way" sense that corrupts everything around it.
+            </p>
+            <p class="paragraph-text">
+                Corruption. Single-use plastic. Bureaucratic inertia. The kind of entanglements that have been dragged on for far too long. This platform exists strictly as a personal sandbox, testing ground, and symbolic statement against the things we ought to break up with.
+            </p>
+        </div>
+
+        <div class="right-col">
+            <div class="quote-card">
+                <h3>"We didn't start the fire. But we are absolutely filing the paperwork."</h3>
+                <p>— DIVORCEINCIDER, EST. 2026</p>
+                <div class="stamps-wrapper">
+                    <div class="stamp">FILED</div>
+                    <div class="stamp">REVIEWED</div>
+                    <div class="stamp">BINDING*</div>
+                </div>
+                <span class="stamp-sub">*not actually binding</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 divorceinsider.in | Personal Practice & Test Bed
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divorce Incider | About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #121212;
+            color: #d1d5db;
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navigation Header */
+        header {
+            background-color: #121212;
+            border-bottom: 1px solid #2a2a2a;
+            padding: 1.2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .logo-icon {
+            color: #e53e3e;
+            font-size: 1.6rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #a0aec0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 4px;
+        }
+
+        .btn-file {
+            border: 1px solid #e53e3e;
+            color: #e53e3e;
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn-file:hover {
+            background-color: #e53e3e;
+            color: #ffffff;
+        }
+
+        /* Page Header */
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem 2rem 2rem;
+        }
+
+        .doc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #718096;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .doc-header-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #2d3748;
+            margin: 0 1rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.2rem;
+            color: #a0aec0;
+            max-width: 700px;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #2a2a2a;
+            max-width: 1100px;
+            margin: 3rem auto;
+        }
+
+        /* Content Layout */
+        .content-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem 2rem;
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 4rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-num {
+            color: #e53e3e;
+            font-size: 1.2rem;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .paragraph-text {
+            color: #a0aec0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .list-box {
+            background-color: #1a1a1a;
+            border: 1px solid #2d3748;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+
+        .list-box h4 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+
+        .list-box ul {
+            list-style: none;
+        }
+
+        .list-box li {
+            color: #cbd5e0;
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .list-box li:last-child {
+            border-bottom: none;
+        }
+
+        .list-box li span.icon {
+            color: #e53e3e;
+        }
+
+        /* Sidebar Legal Notice Box */
+        .notice-card {
+            border: 1px solid #e53e3e;
+            background-color: #1a1414;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .notice-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .notice-card p {
+            color: #a0aec0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .stamps-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .stamp {
+            border: 1px solid #e53e3e;
+            color: #e53e3e;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: rotate(-3deg);
+        }
+
+        footer {
+            border-top: 1px solid #2a2a2a;
+            text-align: center;
+            padding: 2rem;
+            color: #4a5568;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">⚖</span> DivorceIncider
+        </a>
+        <nav>
+            <a href="cases.html">THE CASES</a>
+            <a href="about.html" class="active">MANIFESTO</a>
+            <a href="contact.html" class="btn-file">FILE A CASE</a>
+        </nav>
+    </header>
+
+    <!-- Page Title / Header -->
+    <section class="hero">
+        <div class="doc-header">
+            <span>LEGAL DISCLAIMER & JURISDICTION</span>
+            <div class="doc-header-line"></div>
+            <span>CLAUSE NO. DI-2026-A02</span>
+        </div>
+        <h1>About The Sandbox.</h1>
+        <p class="subtitle">A clear breakdown of what this site is, what it isn't, and the only divorces we actually support.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Main Content Grid -->
+    <main class="content-grid">
+        <div class="left-col">
+            <h2 class="section-title">
+                <span class="section-num">§ 2</span> Statement of Non-Intent
+            </h2>
+            <p class="paragraph-text">
+                If you arrived at <strong>divorceincider.in</strong> looking for actual legal counsel, family court filings, or matrimonial separation — you are in the wrong courtroom. This platform operates purely as a personal sandbox, coding testbed, and web design playground.
+            </p>
+
+            <div class="list-box">
+                <h4>Mandatory Grounds for Separation:</h4>
+                <ul>
+                    <li>
+                        <span class="icon">🛑</span> 
+                        <strong>Divorce Corruption:</strong> Sever ties with systemic bribes, nepotism, and unethical practices.
+                    </li>
+                    <li>
+                        <span class="icon">♻️</span> 
+                        <strong>Divorce Single-Use Plastic:</strong> Break off all relationships with disposable pollution.
+                    </li>
+                </ul>
+            </div>
+
+            <p class="paragraph-text">
+                Keep your marriages intact, leave your spouse alone, and focus on divorcing the real societal hazards instead.
+            </p>
+        </div>
+
+        <div class="right-col">
+            <div class="notice-card">
+                <h3>Notice of Non-Binding Nature</h3>
+                <p>No legal advice is offered, implied, or executed on this domain. All docket references and case numbers are fictitious and meant strictly for educational and testing purposes.</p>
+                <div class="stamps-wrapper">
+                    <div class="stamp">NO LEGAL EFFECT</div>
+                    <div class="stamp">SANDBOX ONLY</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 divorceinsider.in | Personal Practice & Test Bed
+    </footer>
+
+</body>
+</html>
